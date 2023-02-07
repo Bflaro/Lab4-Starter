@@ -19,7 +19,7 @@ public class App {
      * Each new player object is added to an ArrayList of Player objects
      * <br>
      * 
-     * @param args - args[0] will hold name of input file (to be done in lab)
+     * @param args 
      */
     public static void main(String[] args)  {
         loadPlayerFile();
@@ -34,7 +34,7 @@ public class App {
      * 
      * 1 - Open input and output files
      * 2 - For each line of input
-     * 3 -- split line into tokans
+     * 3 -- split line into tokens
      * 4 -- create new player whose name is given by token[0]
      * 5 -- add remaining tokens to player's list of sports 
      * 6 - add player to player list
@@ -42,7 +42,7 @@ public class App {
      */
 
     private static void loadPlayerFile() {
-        File file = new File("res/players.txt");
+        File file = new File("res\\players.txt");
         try{
             // 1            
             FileReader fileReader = new FileReader(file);
@@ -52,7 +52,7 @@ public class App {
             String line = bufferedReader.readLine();
             while (line != null)
             {
-                String[] tokens = line.split(",");              // 3
+                String[] tokens = line.split(",");        // 3
                 Player player = new Player(tokens[0].trim());   // 4
                 for (int i = 1; i < tokens.length; i++) {       // 5
                     String sport = tokens[i].trim();
